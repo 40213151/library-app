@@ -1,9 +1,10 @@
 import { Book, PrismaClient } from "@prisma/client";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { BookRepositoryInterface } from "./bookRepositoryInterface";
 
 const adapter = new PrismaBetterSqlite3({ url: "file:./dev.db" });
 
-export class PrismaBookRepository {
+export class PrismaBookRepository implements BookRepositoryInterface {
   private prisma: PrismaClient;
 
   constructor() {
