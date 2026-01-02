@@ -9,7 +9,7 @@ const bookController = new BookController();
 
 const PORT = process.env.PORT || 3000;
 
-app.post("/books", booksController.add.bind(booksController));
-app.get("/books/:id", booksController.findById.bind(booksController));
+app.post("/books", bookController.add.bind(bookController));
+app.get("/books/:id", bookController.findById.bind(bookController));
 
 app.listen(PORT, () => console.log("server is running"));
