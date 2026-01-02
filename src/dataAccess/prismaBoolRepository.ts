@@ -18,4 +18,12 @@ export class PrismaBookRepository {
       },
     });
   }
+
+  async findById(id: string): Promise<Book | null> {
+    return await this.prisma.book.findUnique({
+      where: {
+        id,
+      },
+    });
+  }
 }
