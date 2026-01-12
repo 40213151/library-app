@@ -1,6 +1,6 @@
 import { Book, PrismaClient } from "@prisma/client";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
-import { BookRepositoryInterface } from "./bookRepositoryInterface";
+import { BookRepositoryInterface } from "../domain/repositories/bookRepositoryInterface";
 
 const adapter = new PrismaBetterSqlite3({ url: "file:./dev.db" });
 
